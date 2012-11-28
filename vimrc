@@ -26,6 +26,8 @@ hi User3 ctermfg=green ctermbg=darkgray
 " Atalhos em modo de inserção
 imap <F3> $this->
 imap <F2> ->
+
+" Fecha automaticamente parenteses, colchetes e chaves
 "imap { {}<left>
 "imap ( ()<left>
 "imap [ []<left>
