@@ -11,8 +11,10 @@ set hlsearch        " highlight searches
 set ruler           " show the cursor position all the time
 set visualbell t_vb=    " turn off error beep/flash
 set ignorecase        "ignore case while searching
-"set number            "put numbers on side
+map <F4> <ESC>:set number<CR><ESC>
 set ts=4
+
+" StatusLine Configs
 " set statusline=%F%m%r%h%w\ %=[FORMATO=%{&ff}]\ [TIPO=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [linha=%04l,%04v][%p%%]\ [LINHAS=%L]
 set statusline=%1*\ %F%m%r%h%w\ %2*\ %=FORMATO=%{&ff}\ \|\ TIPO=%Y\ \|\ ASCII=\%03.3b\ \|\ linha=%3*\%04l,%2*\coluna=%3*\%04v\ %0*\ \[%p%%]\ \|\ LINHAS=%L
 set laststatus=2
@@ -20,11 +22,14 @@ hi StatusLine ctermbg=black ctermfg=white
 hi User1 ctermfg=yellow ctermbg=darkgray
 hi User2 ctermfg=blue ctermbg=darkgray
 hi User3 ctermfg=green ctermbg=darkgray
+
+" Atalhos em modo de inserção
 imap <F3> $this->
 imap <F2> ->
-imap { {}<left>
-imap ( ()<left>
-imap [ []<left>
+"imap { {}<left>
+"imap ( ()<left>
+"imap [ []<left>
+imap _e <?=?><left><left>
 
 "====== complementação de palavras ====
 "usa o tab em modo insert para completar palavras
